@@ -24,8 +24,6 @@ class ViewController: UIViewController {
         aboutUserVC.user = user
     }
     
-    
-    
     @IBAction func logInPresed() {
         guard userName.text == user.name,
               password.text == user.password
@@ -37,11 +35,13 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "logIn", sender: nil)
     }
     
-    
-    
-    
     @IBAction func showUserName() {
         showAlert(with: "Oops!", and: "Your name is \(user.name)😎")
+    }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        userName.text = nil
+        password.text = nil
     }
     
     @IBAction func showPassword() {
@@ -62,5 +62,13 @@ extension ViewController {
         }
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+}
+
+//MARK: - Work with text field
+extension ViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
 }
