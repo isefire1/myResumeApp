@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA25BD2025448C0E00CB4C0D /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25BD1F25448C0E00CB4C0D /* AboutMeViewController.swift */; };
 		FA955E46254440AA009D3574 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA955E45254440AA009D3574 /* AppDelegate.swift */; };
 		FA955E48254440AA009D3574 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA955E47254440AA009D3574 /* SceneDelegate.swift */; };
 		FA955E4A254440AA009D3574 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA955E49254440AA009D3574 /* ViewController.swift */; };
 		FA955E4D254440AA009D3574 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA955E4B254440AA009D3574 /* Main.storyboard */; };
 		FA955E4F254440AB009D3574 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA955E4E254440AB009D3574 /* Assets.xcassets */; };
 		FA955E52254440AB009D3574 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA955E50254440AB009D3574 /* LaunchScreen.storyboard */; };
+		FA955E67254474C1009D3574 /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA955E66254474C1009D3574 /* Figure.swift */; };
+		FA955E6A254476FC009D3574 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA955E69254476FC009D3574 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA25BD1F25448C0E00CB4C0D /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		FA955E42254440AA009D3574 /* myResumeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myResumeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA955E45254440AA009D3574 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA955E47254440AA009D3574 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		FA955E4E254440AB009D3574 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA955E51254440AB009D3574 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA955E53254440AB009D3574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA955E66254474C1009D3574 /* Figure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
+		FA955E69254476FC009D3574 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		FA955E44254440AA009D3574 /* myResumeApp */ = {
 			isa = PBXGroup;
 			children = (
-				FA955E45254440AA009D3574 /* AppDelegate.swift */,
-				FA955E47254440AA009D3574 /* SceneDelegate.swift */,
-				FA955E49254440AA009D3574 /* ViewController.swift */,
-				FA955E4B254440AA009D3574 /* Main.storyboard */,
-				FA955E4E254440AB009D3574 /* Assets.xcassets */,
-				FA955E50254440AB009D3574 /* LaunchScreen.storyboard */,
-				FA955E53254440AB009D3574 /* Info.plist */,
+				FA955E61254446C5009D3574 /* ViewControllers */,
+				FA955E642544473D009D3574 /* Models */,
+				FA955E5B25444590009D3574 /* Storyboards */,
+				FA955E5E25444618009D3574 /* Supporting Files */,
+				FA955E63254446F7009D3574 /* Resourses */,
 			);
 			path = myResumeApp;
+			sourceTree = "<group>";
+		};
+		FA955E5B25444590009D3574 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA955E4B254440AA009D3574 /* Main.storyboard */,
+				FA955E50254440AB009D3574 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA955E5E25444618009D3574 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA955E45254440AA009D3574 /* AppDelegate.swift */,
+				FA955E47254440AA009D3574 /* SceneDelegate.swift */,
+				FA955E53254440AB009D3574 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA955E61254446C5009D3574 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA955E49254440AA009D3574 /* ViewController.swift */,
+				FA955E69254476FC009D3574 /* WelcomeViewController.swift */,
+				FA25BD1F25448C0E00CB4C0D /* AboutMeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA955E63254446F7009D3574 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				FA955E4E254440AB009D3574 /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		FA955E642544473D009D3574 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA955E66254474C1009D3574 /* Figure.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +187,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA955E4A254440AA009D3574 /* ViewController.swift in Sources */,
+				FA955E6A254476FC009D3574 /* WelcomeViewController.swift in Sources */,
+				FA955E67254474C1009D3574 /* Figure.swift in Sources */,
 				FA955E46254440AA009D3574 /* AppDelegate.swift in Sources */,
+				FA25BD2025448C0E00CB4C0D /* AboutMeViewController.swift in Sources */,
 				FA955E48254440AA009D3574 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +340,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YH6BRXDDH8;
-				INFOPLIST_FILE = myResumeApp/Info.plist;
+				INFOPLIST_FILE = "myResumeApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.isefire.myResumeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +359,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YH6BRXDDH8;
-				INFOPLIST_FILE = myResumeApp/Info.plist;
+				INFOPLIST_FILE = "myResumeApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.isefire.myResumeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

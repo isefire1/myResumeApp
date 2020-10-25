@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AboutMeViewController.swift
 //  myResumeApp
 //
 //  Created by Alex on 24.10.2020.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AboutMeViewController: UIViewController {
+    
+    var user: User!
 
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = user.name
     }
-
-
 }
-
