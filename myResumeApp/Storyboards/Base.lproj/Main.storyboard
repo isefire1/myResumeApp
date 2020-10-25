@@ -97,33 +97,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="mnB-b1-SlW">
-                                <rect key="frame" x="98.5" y="80" width="178" height="263.5"/>
+                                <rect key="frame" x="99.5" y="88" width="176" height="263.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADk-9a-b9Q">
-                                        <rect key="frame" x="0.0" y="0.0" width="178" height="80"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="80"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✌️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3D-ci-nCD">
-                                        <rect key="frame" x="35" y="144" width="108" height="119.5"/>
+                                        <rect key="frame" x="34" y="144" width="108" height="119.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahg-Fw-wMq">
+                                <rect key="frame" x="125" y="510" width="125" height="38"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="rfz-ga-y76"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="sMh-iL-sbi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nlE-Mu-WLf"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
-                            <constraint firstItem="mnB-b1-SlW" firstAttribute="centerX" secondItem="2rZ-07-YgB" secondAttribute="centerX" id="8X7-C4-Ilp"/>
-                            <constraint firstItem="mnB-b1-SlW" firstAttribute="top" secondItem="nlE-Mu-WLf" secondAttribute="top" constant="80" id="98r-rS-IAy"/>
+                            <constraint firstItem="ahg-Fw-wMq" firstAttribute="centerX" secondItem="nlE-Mu-WLf" secondAttribute="centerX" id="EYe-Hc-wIm"/>
+                            <constraint firstItem="nlE-Mu-WLf" firstAttribute="bottom" secondItem="ahg-Fw-wMq" secondAttribute="bottom" constant="70" id="Qmt-uL-6JT"/>
+                            <constraint firstItem="mnB-b1-SlW" firstAttribute="top" secondItem="nlE-Mu-WLf" secondAttribute="top" constant="88" id="XFD-73-txB"/>
+                            <constraint firstItem="mnB-b1-SlW" firstAttribute="centerX" secondItem="nlE-Mu-WLf" secondAttribute="centerX" id="piQ-Cv-GlH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="suit.spade.fill" catalog="system" id="1U7-Zt-SBI"/>
                     <navigationItem key="navigationItem" id="98x-bf-ORJ"/>
                     <connections>
+                        <outlet property="logOut" destination="ahg-Fw-wMq" id="0jd-nk-oKs"/>
                         <outlet property="welcomeUserName" destination="ADk-9a-b9Q" id="u2f-6Y-afS"/>
                     </connections>
                 </viewController>
@@ -197,7 +212,6 @@
         <!--Item-->
         <scene sceneID="lcJ-af-JHs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yNf-Y5-KSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zov-qk-Phj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" image="suit.club" catalog="system" id="cN2-9F-T3K"/>
                     <toolbarItems/>
@@ -210,6 +224,7 @@
                         <segue destination="Rv9-ot-dUk" kind="relationship" relationship="rootViewController" id="sQ9-cq-8SU"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yNf-Y5-KSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1881" y="911"/>
         </scene>
@@ -278,6 +293,9 @@
     <resources>
         <image name="suit.club" catalog="system" width="128" height="121"/>
         <image name="suit.spade.fill" catalog="system" width="128" height="124"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -286,6 +304,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

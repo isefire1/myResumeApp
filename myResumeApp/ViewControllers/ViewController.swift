@@ -51,8 +51,12 @@ class ViewController: UIViewController {
 
 // MARK: - Alert Controller
 extension ViewController {
-    private func showAlert(with title: String, and message: String, textField: UITextField? = nil) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    private func showAlert(with title: String,
+                           and message: String,
+                           textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             textField?.text = nil
         }
