@@ -12,7 +12,7 @@ struct User {
     let password: String
     
     static func userPressed() -> User {
-        User.init(name: "Alehandro", password: "easy")
+        User(name: "Alehandro", password: "easy")
     }
 }
 
